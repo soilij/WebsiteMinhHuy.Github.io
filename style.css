@@ -284,3 +284,67 @@ footer {
         display: none; /* Thay bằng menu mobile nếu cần */
     }
 }
+
+/* Môn Học CNTT */
+.courses {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.course-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.course-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.course-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.course-code {
+    background-color: #f1f1f1;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.course-credits {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Responsive cho Danh Sách Môn Học */
+@media screen and (max-width: 1024px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
